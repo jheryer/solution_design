@@ -1,10 +1,10 @@
 = Solution Design Template
 
-This project was created to easily create a new arc42 version 8 project template in asciidoc. The bash script is used for copying the arc42 file templates with explanations to a directory named from a command line argument of the script.
+This project was created to easily generate a new arc42 version 8 project template in asciidoc. The bash script is used for copying the arc42 file templates with explanations to a directory named from a command line argument of the script.
 
 == Prerequisites
 
-* Make sure you have AsciiDoc installed on your machine. You can refer to the [Installing AsciiDoc on macOS and Windows](ADOC.adoc) guide for instructions on how to install AsciiDoc.
+* Make sure you have AsciiDoc installed on your machine. You can refer to the xref:ADOC.adoc[Installing AsciiDoctor on macOS and Windows] guide for instructions on how to install AsciiDoc.
 * Make sure you have the 'template' directory in the same location as the script.
 
 == Usage
@@ -12,7 +12,7 @@ This project was created to easily create a new arc42 version 8 project template
 The script can be executed by running the following command in the terminal:
 [source,bash]
 ----
-bash ./create.sh -n <new_dir> [-d] [-v]
+bash create.sh -n <new_dir> [-d] [-v]
 ----
 
 === Flags
@@ -26,17 +26,17 @@ bash ./create.sh -n <new_dir> [-d] [-v]
 * To create a new directory named 'example' and copy the 'template' directory to it, you can run the following command:
 [source,bash]
 ----
-./create.sh -n example
+create.sh -n example
 ----
 * To create a new directory named 'example' and copy the 'template' directory to it with verbose output, you can run the following command:
 [source,bash]
 ----
-./create.sh -n example -v
+create.sh -n example -v
 ----
 * To create a new directory named 'example_folder' and copy the 'template' directory to it with dry run, you can run the following command:
 [source,bash]
 ----
-./create.sh -n "example folder" -d
+create.sh -n "example folder" -d
 ----
 
 == Generating documentation with AsciiDoctor
