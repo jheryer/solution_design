@@ -1,0 +1,73 @@
+= Solution Design Template
+
+This project was created to easily create a new arc42 version 8 project template in asciidoc. The bash script is used for copying the arc42 file templates with explanations to a directory named from a command line argument of the script.
+
+== Prerequisites
+
+* Make sure you have AsciiDoc installed on your machine. You can refer to the [Installing AsciiDoc on macOS and Windows](ADOC.adoc) guide for instructions on how to install AsciiDoc.
+* Make sure you have the 'template' directory in the same location as the script.
+
+== Usage
+
+The script can be executed by running the following command in the terminal:
+[source,bash]
+----
+bash ./create.sh -n <new_dir> [-d] [-v]
+----
+
+=== Flags
+
+* '-n': This flag is used to specify the name of the new directory that the 'template' directory will be copied to.
+* '-d' (optional): This flag is used for a dry run. It will display the command that would be executed, but will not make any changes.
+* '-v' (optional): This flag is used for verbose output. It will display detailed information about the process.
+
+=== Examples
+
+* To create a new directory named 'example' and copy the 'template' directory to it, you can run the following command:
+[source,bash]
+----
+./create.sh -n example
+----
+* To create a new directory named 'example' and copy the 'template' directory to it with verbose output, you can run the following command:
+[source,bash]
+----
+./create.sh -n example -v
+----
+* To create a new directory named 'example_folder' and copy the 'template' directory to it with dry run, you can run the following command:
+[source,bash]
+----
+./create.sh -n "example folder" -d
+----
+
+== Generating documentation with AsciiDoctor
+
+The script also renames the template.adoc file in the new_dir to new_dir.adoc. Once you have created the new directory and copied the 'template' files, you can use AsciiDoctor to generate documentation in different formats.
+
+=== Generating Documents
+
+==== Create a new Project
+To create a new project you can run the following command:
+[source,bash]
+----
+bash create.sh -n new_project
+----
+
+==== Generating html
+
+To generate a PDF representation of the documentation, you can run the following command:
+[source,bash]
+----
+asciidoctor -b html5 new_project/new_project.adoc
+----
+
+This will generate a PDF file named 'new_dir.pdf' in the same directory as the adoc file.
+
+==== Generating PDF
+
+To generate an HTML representation of the documentation, you can run the following command:
+[source, bash]
+----
+asciidoctor -b pdf -r asciidoctor-pdf  new_project/new_project.adoc
+----
+This will generate an HTML file named 'new_dir.html' in the same directory as the adoc file.
+
