@@ -20,14 +20,14 @@ To install AsciiDoc on macOS, you will need to use the Homebrew package manager.
 
 [source,bash]
 ----
-brew install asciidoc
+brew install asciidoctor
 ----
 
 3. Verify the installation by running the following command:
 
 [source,bash]
 ----
-asciidoc --version
+asciidoctor -v
 ----
 
 You should see the version of AsciiDoc that you just installed.
@@ -48,22 +48,7 @@ gem install asciidoctor
 
 [source,bash]
 ----
-asciidoctor --version
+asciidoctor -v
 ----
 
 You should see the version of AsciiDoc that you just installed.
-
-== Using AsciiDoc
-
-To create an AsciiDoc document, you will need to create a plain text file with the `.asciidoc` file extension. You can then use the `asciidoctor` command on Windows or `asciidoc` command on macOS to convert the file to various formats such as HTML, PDF, and EPUB.
-
-For example, to convert an AsciiDoc file named `example.asciidoc` to HTML, you can use the following command:
-
-[source,bash]
-----
-asciidoctor example.asciidoc  # for windows
-asciidoc -b html5 example.asciidoc # for mac
-----
-
-This will create an HTML file named `example.html` in the same directory as the AsciiDoc file.
-
