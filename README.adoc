@@ -60,7 +60,7 @@ To generate a PDF representation of the documentation, you can run the following
 asciidoctor -b html5 new_project/new_project.adoc
 ----
 
-This will generate a PDF file named 'new_dir.pdf' in the same directory as the adoc file.
+This will generate a PDF file named 'new_project/new_project.html' in the same directory as the adoc file.
 
 ==== Generating PDF
 
@@ -69,5 +69,5 @@ To generate an HTML representation of the documentation, you can run the followi
 ----
 asciidoctor -b pdf -r asciidoctor-pdf  new_project/new_project.adoc
 ----
-This will generate an HTML file named 'new_dir.html' in the same directory as the adoc file.
+This will generate an HTML file named 'new_project/new_project.pdf' in the same directory as the adoc file.
 
