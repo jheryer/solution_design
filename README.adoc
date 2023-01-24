@@ -1,6 +1,6 @@
 = Solution Design Template
 
-This project was created to easily generate a new arc42 version 8 project template in asciidoc. The bash script is used for copying the arc42 file templates with explanations to a directory named from a command line argument of the script.
+This project was created to easily generate a new https://arc42.org[arc42] version 8 project template in asciidoc. The bash script is used for copying the arc42 file templates with explanations to a directory named from a command line argument of the script.
 
 == Prerequisites
 
